@@ -5,11 +5,6 @@ Implementação 2 - Designing a virtual memory manager
   <ul>
     <li>O código tem como finalidade traduzir endereços de memória lógicos para físicos.<br />
     <li>Foi implementado na linguagem de programação C.<br />
-   </ul></p>
-
-*Código*
-<p>
-  <ul>
     <li>Para começar o programa foram feitas as leituras dos arquivos addresses.txt e BACKING_STORE.bin:<br />
    </ul></p>
    
