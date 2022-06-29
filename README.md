@@ -88,10 +88,12 @@ if(hit==1){
    </ul></p>
 
 ```c
-tlb[s][0]=paginalogica;
-			tlb[s][1]=i;
-			s++;
-			s=s%15;	
+     if(!strcmp(argv[2],"fifo")){
+      tlb[s][0]=paginalogica;
+	tlb[s][1]=i;
+	s++;
+	s=s%15;
+}
 ```
  <p>
   <ul>
