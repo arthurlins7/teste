@@ -136,17 +136,20 @@ memmove(memoriaprincipal + frame * 256, backing + paginalogica * 256, 256);
 </ul></p>
 
 ```
-all:
-        gcc implementacao.c -o implementacao
+vm: vm.c
+	gcc $< -o $@ -pthread
+
+.PHONY: run clean
 
 run:
-        ./implementacao
+	./vm
 
 clean:
-        rm correct.txt
+	rm vm
+
 ```
 
-*Resultado*
+*Resultado substituição por FIFO do arquvo addresses.txt*
 ```
 Virtual address: 16916 Physical address: 20 Value: 0
 Virtual address: 62493 Physical address: 285 Value: 0
