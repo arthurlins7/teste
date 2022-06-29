@@ -5,21 +5,22 @@ Implementação 2 - Designing a virtual memory manager
   <ul>
     <li>O código tem como finalidade traduzir endereços de memória lógicos para físicos.<br />
     <li>Foi implementado na linguagem de programação C.<br />
-    <li>Para começar o programa foram feitas as leituras dos arquivos addresses.txt e BACKING_STORE.bin:<br />
+    <li>Para começar o programa foram feitas as leituras do arquivo que o usuário deseja que seja lido e do BACKING_STORE.bin.<br />
+    <li>E a abertura do arquivo correct.txt para escrita:<br />
    </ul></p>
    
 ```c
-if ((fptr = fopen("addresses.txt","r")) == NULL){
+  if ((fptr = fopen(argv[1],"r")) == NULL){
       printf("Error! opening addresses file");
       exit(1);
-}
-if ((fptw = fopen("correct.txt","w")) == NULL){
+  }
+   if ((fptw = fopen("correct.txt","w")) == NULL){
       printf("Error! opening correct file");
       exit(1);
-}
-  
-int backing_fd = open("BACKING_STORE.bin", 00);
-backing = mmap(0, 256*256, 0x1, 0x02, backing_fd, 0); 
+  }
+
+  int backing_fd = open("BACKING_STORE.bin", 00);
+  backing = mmap(0, 256*256, 0x1, 0x02, backing_fd, 0);
 ```
 <p>
   <ul>
